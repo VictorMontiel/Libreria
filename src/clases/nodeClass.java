@@ -16,17 +16,17 @@ public class nodeClass <G>{
    protected G data;
    protected nodeClass next;
     
-    protected G getData(){ //método para obtener el dato
+    public G getData(){ //método para obtener el dato
         return this.data;
        
     }
-    protected void setData(G data){//método para darle valor al dato del nodo
+    public void setData(G data){//método para darle valor al dato del nodo
         this.data=data;
     }
-    protected nodeClass getNext(){ //método para obtener el siguiente nodo
+    public nodeClass getNext(){ //método para obtener el siguiente nodo
         return this.next;
     }
-    protected void setNext(nodeClass node){ //método para apuntar al siguiente nodo
+    public void setNext(nodeClass node){ //método para apuntar al siguiente nodo
         this.next=node;
     }
 }

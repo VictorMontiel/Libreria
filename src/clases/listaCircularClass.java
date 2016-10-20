@@ -12,6 +12,13 @@ package clases;
 public class listaCircularClass <G>{
     
     private nodeClass pivote;
+    
+    public nodeClass getPivote(){
+        return this.pivote;
+    }
+    public void setPivote(nodeClass n){
+        pivote=n;
+    }
 
     public void insert(G g) {  //método para insertar un nodo
         nodeClass nodo = new nodeClass();

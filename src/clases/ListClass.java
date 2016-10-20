@@ -13,16 +13,29 @@ package clases;
 public class ListClass <G>{
     private nodeClass first;
     private nodeClass last;
+    
+    public nodeClass getFirst(){
+        return this.first;
+    }
+    public nodeClass getLast(){
+        return this.last;
+    }
+    public void setFirst(nodeClass n){
+        this.first=n;
+    }
+    public void setLast(nodeClass n){
+        this.last=n;
+    }
 
     public void insertFirst(G n) {
         nodeClass node = new nodeClass();
         node.setData(n);
         if (eList()) {
-            first = node;
-            last = node;
+            setFirst(node);
+            setLast(node);
         } else {
             node.setNext(first); 
-            first = node;
+            setFirst(node);
 
         }
     }
@@ -31,11 +44,11 @@ public class ListClass <G>{
         nodeClass node = new nodeClass();
         node.setData(n);
         if (eList()) {
-            first = node;
-            last = node;
+            setFirst(node);
+            setLast(node);
         } else {
             last.setNext(node);
-            last = node;
+            setLast(node);
         }
     }
 

@@ -8,6 +8,7 @@ package clases;
 /**
  *
  * @author Paco
+ * @param <G>
  */
 public class nodeDL <G>{
     protected G data;
