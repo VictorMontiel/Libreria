@@ -89,5 +89,26 @@ public class Queue<G> {
         this.last = null;
         this.size = 0;
     }
+    public G deleteFirst(){
+        nodeClass temp;
+        if (!isEmpty()){
+            if (size==1){
+                temp=this.first;
+                this.first = this.last = null;
+                size=0;
+            }else{
+                temp=last;
+                while(temp.getNext()!=first){
+                    temp=temp.getNext();
+                }
+                first = temp;
+                temp = first.getNext();
+                first.setNext(null);
+                --size;
+            }
+           return (G) temp.getData();
+        }
+        return null;
+    }
 }
 

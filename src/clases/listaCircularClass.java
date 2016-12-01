@@ -50,6 +50,19 @@ public class listaCircularClass <G>{
             return false;
         }
     }
+        public nodeClass searchNoden(int i){
+        nodeClass aux;
+        if (eList()) {
+            return null;
+        }
+        int c=1;
+        aux=pivote;
+        while (c<i){
+            aux=aux.getNext();
+            c++;
+        }
+        return aux;
+    }
 
     public boolean eList() { //devuelve true si está vacia la lista, false de lo contrario
         return pivote == null;
